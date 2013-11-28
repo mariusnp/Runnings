@@ -29,4 +29,4 @@ $('input[data-register]').on('click', function(e){
 
 
 
-$('#username').html(localStorage.getItem('usernam e'));
+$('#username').html(localStorage.getItem('username'));
