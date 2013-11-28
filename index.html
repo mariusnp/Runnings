@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Runnings</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <link rel="stylesheet"href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/hot-sneaks/jquery-ui.css" />
+
+</head>
+<body>
+
+<!-- Logg inn/registrer bruker -->
+<div data-role="page" id=LoggInnRegistrer">
+        <div data-role="header">
+            <h1>Runnings</h1>
+        </div>
+        <div data-role="content">
+            <p>Logg inn eller registrer deg med tjenestene under eller med e-postadressen din</p>
+            <input type="button" value="Logg inn med Google" data-link="#Innlogget">
+            <input type="button" value="Logg inn med Facebook" data-link="#Innlogget">
+            <input type="button" value="Logg inn med Twitter" data-link="#Innlogget">
+            <p>Eller, <a href="#EmailRegistrer">Logg inn med e-postadressen din</a></p>
+        </div>
+</div>
+
+<!-- Registrer bruker med epost -->
+<div data-role="page" id="EmailRegistrer">
+    <div data-role="header">
+        <h1>Runnings</h1>
+    </div>
+    <div data-role="content">
+        <p>Logg inn <lenke>Glemt passord eller brukernavn?</lenke></p>
+
+        <input type="email" data-clear-btn="true" name="email" id="signUpemail" placeholder="E-post">
+
+        <input type="password" data-clear-btn="true" name="password" id="signUppassword" placeholder="Passord" autocomplete="off">
+
+        <input type="button" value="Registrer deg" data-register>
+        <p>eller</p>
+        <input type="button" value="Logg inn" data-register>
+    </div>
+</div>
+
+<!-- valg av treningsapplikasjoner -->
+<div data-role="page" id="TreningsTjenester">
+    <div data-role="header">
+        <h1>Treningstjenester</h1>
+    </div>
+    <div data-role="content"> 
+        <p>Veld de treningstjenestene du ønsker å koble opp til Runnings!
+            NB: I neste steg må du logge inn i alle tjenestene</p>
+        <input type="button" value="Garmin">
+        <input type="button" value="RunKeeper">
+        <input type="button" value="Nike+">
+        <input type="button" value="Endomondo">
+    </div>
+    <div data-role="footer">
+        <div></div>
+        <input type="button" value="Neste >">
+    </div>
+</div>
+
+<!-- bruker innlogget -->
+<div data-role="page" id="Innlogget">
+    <div data-role="header">
+        <input type="">
+        <h1 id="username"></h1>
+        <input type="button" value="">
+        <input type="button" value="">
+    </div>
+    <div data-role="content">
+
+    </div>
+    <div data-role="footer">
+        <input type="button" value="Planlegg trening >">
+    </div>
+</div>
+
+<!-- liste med venner av bruker -->
+<div data-role="page" id="Venner">
+    <div data-role="header">
+        <input type="button" value="< Tilbake">
+        <h1>Toppliste</h1>
+        <input type="button" value="+">
+    </div>
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!-- Treningsplanlegger -->
+<div data-role="page" id="Treningsplanlegger">
+    <div data-role="header">
+        <input type="button" value="< Tilbake">
+        <h1>Planlegg trening</h1>
+    </div>
+    <div data-role="content">
+
+    </div>
+    <div data-role="footer">
+        <input type="button" value="Lagre">
+    </div>
+</div>
+
+<!-- Innstillinger -->
+<div data-role="page" id="Innstillinger">
+    <div data-role="header">
+        <input type="button" value="< Tilbake">
+        <h1>Innstillinger</h1>
+    </div>
+    <div data-role="content">
+
+    </div>
+    <div data-role="footer">
+        <input type="button" value="Lagre">
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script src="js.js"></script>
+
+</body>
+</html>
