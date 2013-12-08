@@ -1,7 +1,3 @@
-/**
- * Created by Nagel on 28.11.13.
- */
-
 var url = window.location.href,
     baseURL = url.split('#');
 
@@ -30,3 +26,9 @@ $('input[data-register]').on('click', function(e){
 
 
 $('#username').html(localStorage.getItem('username'));
+
+
+$('.flexslider').flexslider({
+  animation: 'slide'
+});
+

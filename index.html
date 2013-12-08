@@ -5,13 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-    <link rel="stylesheet"href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/hot-sneaks/jquery-ui.css" />
-
+    <link rel="stylesheet" href="flexslider.css" type="text/css">
 </head>
 <body>
 
 <!-- Logg inn/registrer bruker -->
-<div data-role="page" id=LoggInnRegistrer">
+<div data-role="page" id="LoggInnRegistrer">
         <div data-role="header">
             <h1>Runnings</h1>
         </div>
@@ -30,12 +29,9 @@
         <h1>Runnings</h1>
     </div>
     <div data-role="content">
-        <p>Logg inn <lenke>Glemt passord eller brukernavn?</lenke></p>
-
+        <p>Logg inn</p>
         <input type="email" data-clear-btn="true" name="email" id="signUpemail" placeholder="E-post">
-
         <input type="password" data-clear-btn="true" name="password" id="signUppassword" placeholder="Passord" autocomplete="off">
-
         <input type="button" value="Registrer deg" data-register>
         <p>eller</p>
         <input type="button" value="Logg inn" data-register>
@@ -64,62 +60,120 @@
 <!-- bruker innlogget -->
 <div data-role="page" id="Innlogget">
     <div data-role="header">
-        <input type="">
         <h1 id="username"></h1>
-        <input type="button" value="">
-        <input type="button" value="">
+        <h1>Marius</h1>
     </div>
     <div data-role="content">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="img/slide1.jpg" width="200px" height="400px" />
+                </li>
+                <li>
+                    <img src="img/slide2.jpg" width="200px" height="400px" />
+                </li>
+                <li>
+                     <img src="img/slide3.jpg" width="200px" height="400px" />
+                </li>
+            </ul>
+        </div>
 
-    </div>
-    <div data-role="footer">
-        <input type="button" value="Planlegg trening >">
+        <input type="button" value="Planlegg trening" data-link="#Treningsplanlegger">
+        <input type="button" value="venner" data-link="#Venner">
+        <input type="button" value="Innstillinger" data-link="#Innstillinger">
     </div>
 </div>
 
 <!-- liste med venner av bruker -->
 <div data-role="page" id="Venner">
     <div data-role="header">
-        <input type="button" value="< Tilbake">
         <h1>Toppliste</h1>
-        <input type="button" value="+">
+        <input type="button" value="Legg til venn">
     </div>
     <div data-role="content">
+        <p>Marius <br>
+        Denne uken: 9,3 km <br>
+        Denne måneden: 21,9 km</p>
+        <br>
 
+        <p>Joakim <br>
+        Denne uken: 5,7 km <br>
+        Denne måneden: 14,2 km</p>
+        <br>
+
+        <p>August <br>
+        Denne uken: 4,6 km <br>
+        Denne måneden: 21,9 km</p>
+        <br>
+        <input type="button" value="Tilbake" data-link="#Innlogget">
     </div>
 </div>
 
 <!-- Treningsplanlegger -->
 <div data-role="page" id="Treningsplanlegger">
     <div data-role="header">
-        <input type="button" value="< Tilbake">
         <h1>Planlegg trening</h1>
     </div>
     <div data-role="content">
+        <p>Jeg skal trene</p>
+            <label for="select-choice-a" class="select"></label>
+            <select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+            <option>Antall dager:</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            </select>
+            <p>ganger i uken</p>
 
-    </div>
-    <div data-role="footer">
-        <input type="button" value="Lagre">
+            <label for="select-choice-b" class="select"></label>
+            <select name="select-choice-b" id="select-choice-b" data-native-menu="false">
+            <option>Ukedag</option>
+            <option value="Mandag">Mandag</option>
+            <option value="Tirsdag">Tirsdag</option>
+            <option value="Onsdag">Onsdag</option>
+            <option value="Torsdag">Torsdag</option>
+            <option value="Fredag">Fredag</option>
+            <option value="Lørdag">Lørdag</option>
+            <option value="Søndag">Søndag</option>
+            </select>
+
+            <label for="select-choice-c" class="select"></label>
+            <select name="select-choice-c" id="select-choice-c" data-native-menu="false">
+            <option>Ukedag</option>
+            <option value="Mandag">Mandag</option>
+            <option value="Tirsdag">Tirsdag</option>
+            <option value="Onsdag">Onsdag</option>
+            <option value="Torsdag">Torsdag</option>
+            <option value="Fredag">Fredag</option>
+            <option value="Lørdag">Lørdag</option>
+            <option value="Søndag">Søndag</option>
+            </select>
+        <input type="button" value="Lagre" data-link="#Innlogget">
     </div>
 </div>
 
 <!-- Innstillinger -->
 <div data-role="page" id="Innstillinger">
     <div data-role="header">
-        <input type="button" value="< Tilbake">
         <h1>Innstillinger</h1>
     </div>
     <div data-role="content">
-
-    </div>
-    <div data-role="footer">
-        <input type="button" value="Lagre">
-    </div>
+        <p>Bytte bilde:</p>
+        <img src="img/gravatar.jpg" width="50px" height="50px">
+        <p>Bytte navn:</p>
+        <input type="password" data-clear-btn="true" name="navn" id="navn" placeholder="Marius">
+        <p>Bytte passord:</p>
+        <input type="password" data-clear-btn="true" name="password" id="oldPassword" placeholder="Gammelt passord">
+        <input type="password" data-clear-btn="true" name="passwordNew" id="NewPassword" placeholder="Nytt passord">
+        <input type="button" value="Lagre" data-link="#Innlogget">
 </div>
 
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script src="jquery.flexslider.js"></script>
 <script src="js.js"></script>
+
 
 </body>
 </html>
